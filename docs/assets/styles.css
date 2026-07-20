@@ -1,0 +1,38 @@
+/* Theme tokens (RGB triplets so Tailwind opacity modifiers work) */
+:root {
+  --background: 15 16 21;
+  --foreground: 244 244 247;
+  --card: 23 24 30;
+  --card-foreground: 244 244 247;
+  --primary: 151 71 246;
+  --primary-foreground: 250 245 255;
+  --secondary: 36 37 45;
+  --secondary-foreground: 244 244 247;
+  --muted: 31 32 39;
+  --muted-foreground: 158 159 168;
+  --border: 42 43 51;
+  --input: 52 53 62;
+  --ring: 151 71 246;
+}
+
+html {
+  background-color: rgb(var(--background));
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Techy grid backdrop used behind the hero */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(var(--border)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--border)) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
