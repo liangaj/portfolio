@@ -12,7 +12,7 @@ export function ContactSection() {
     <section id="contact" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
-          04 — Contact
+          05 — Contact
         </p>
         <div className="grid gap-10 md:grid-cols-[1fr_1fr]">
           <div>

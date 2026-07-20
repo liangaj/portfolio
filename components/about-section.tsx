@@ -17,7 +17,7 @@ export function AboutSection() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[1fr_1fr] md:py-28">
         <div>
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
-            03 — About
+            04 — About
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
             A designer who thinks in systems and cares about people
@@ -26,10 +26,11 @@ export function AboutSection() {
 
         <div className="flex flex-col gap-6">
           <p className="text-pretty leading-relaxed text-muted-foreground">
-            I picked up a minor in UX design because I kept gravitating toward
-            the same question: why is this so hard to use? That curiosity turned
-            into a practice built on research, iteration, and a genuine respect
-            for the people on the other side of the screen.
+            I majored in computer science and minored in UX design because I
+            kept gravitating toward the same question: why is this so hard to
+            use? That curiosity turned into a practice built on research,
+            iteration, and a genuine respect for the people on the other side of
+            the screen — backed by the engineering skills to actually build it.
           </p>
           <p className="text-pretty leading-relaxed text-muted-foreground">
             My work spans the full arc of design — from field interviews and

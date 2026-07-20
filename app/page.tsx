@@ -2,6 +2,7 @@ import { SiteNav } from "@/components/site-nav"
 import { Hero } from "@/components/hero"
 import { WorkSection } from "@/components/work-section"
 import { ResearchSection } from "@/components/research-section"
+import { EngineeringSection } from "@/components/engineering-section"
 import { AboutSection } from "@/components/about-section"
 import { ContactSection } from "@/components/contact-section"
 import { SiteFooter } from "@/components/site-footer"
@@ -14,6 +15,7 @@ export default function Page() {
         <Hero />
         <WorkSection />
         <ResearchSection />
+        <EngineeringSection />
         <AboutSection />
         <ContactSection />
       </main>
