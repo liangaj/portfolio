@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Alex Rivera. Designed &amp; built with care.
+          © {new Date().getFullYear()} Amy Liang. Designed &amp; built with love.
         </p>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
           <Link href="/#work" className="transition-colors hover:text-foreground">
@@ -15,7 +15,7 @@ export function SiteFooter() {
             Research
           </Link>
           <a
-            href="mailto:hello@alexrivera.design"
+            href="mailto:aliang1903@gmail.com"
             className="transition-colors hover:text-foreground"
           >
             Email

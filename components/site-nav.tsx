@@ -23,7 +23,7 @@ export function SiteNav() {
           className="flex items-center gap-2 font-mono text-sm tracking-tight"
         >
           <span className="inline-block h-2 w-2 rounded-full bg-primary" />
-          <span className="font-semibold">alex.rivera</span>
+          <span className="font-semibold">amy.liang</span>
           <span className="text-muted-foreground">/ux</span>
         </Link>
 

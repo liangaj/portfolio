@@ -1,10 +1,8 @@
 import { ArrowUpRight, Mail } from "lucide-react"
 
 const socials = [
-  { label: "Email", value: "hello@alexrivera.design", href: "mailto:hello@alexrivera.design" },
-  { label: "LinkedIn", value: "/in/alexrivera", href: "https://linkedin.com" },
-  { label: "Dribbble", value: "@alexrivera", href: "https://dribbble.com" },
-  { label: "Read.cv", value: "alexrivera", href: "https://read.cv" },
+  { label: "Email", value: "aliang1903@gmail.com", href: "mailto:aliang1903@gmail.com" },
+  { label: "LinkedIn", value: "/in/amy-jiayu-liang", href: "https://linkedin.com/in/amy-jiayu-liang" },
 ]
 
 export function ContactSection() {
@@ -25,11 +23,11 @@ export function ContactSection() {
               to hear about it.
             </p>
             <a
-              href="mailto:hello@alexrivera.design"
+              href="mailto:aliang1903@gmail.com"
               className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Mail className="h-4 w-4" />
-              hello@alexrivera.design
+              aliang1903@gmail.com
             </a>
           </div>
 
