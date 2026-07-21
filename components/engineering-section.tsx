@@ -69,7 +69,7 @@ export function EngineeringSection() {
           {engineeringProjects.map((project) => (
             <article
               key={project.title}
-              className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
+              className="relative z-10 group flex flex-col rounded-xl border border-border bg-card p-6 transition-transform duration-300 ease-out hover:border-primary/50 hover:scale-[1.02]"
             >
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
