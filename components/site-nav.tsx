@@ -24,7 +24,7 @@ export function SiteNav() {
         >
           <span className="inline-block h-2 w-2 rounded-full bg-primary" />
           <span className="font-semibold">amy.liang</span>
-          <span className="text-muted-foreground">/ux</span>
+          <span className="text-muted-foreground">/ui.ux & swe</span>
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

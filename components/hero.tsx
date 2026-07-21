@@ -20,18 +20,18 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 font-mono text-xs text-muted-foreground">
           <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-          Available for UX internships &amp; freelance
+          Available for full-time UI/UX  &amp; SWE
         </div>
 
         <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-          Designing calm, usable products{" "}
-          <span className="text-primary">grounded in research.</span>
+          Designing and building {" "}
+          <span className="text-primary">intuitive digital experiences.</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          I&apos;m Alex Rivera, a UX designer with a minor in UX design. I turn
-          messy problems into clear, accessible experiences — through user
-          research, storyboards, and high-fidelity Figma designs.
+          I&apos;m Amy Liang, a Computer Science graduate with a minor in UX Design. 
+          I combine user-centered design with software engineering to create accessible, 
+          thoughtful digital products.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
