@@ -41,8 +41,8 @@ export const projects: Project[] = [
     categoryLabel: "Figma App Prototype",
     year: "2026",
     role: "Product & UX Design",
-    timeline: "3 months",
-    tools: ["Figma", "UX Research", "Interviews", "Prototyping"],
+    timeline: "Jan. 2026 — Apr. 2026",
+    tools: ["Figma", "UX Research", "Interviews", "Affinity Diagrams", "Prototyping"],
     image: "/images/campuscash-app.jpg",
     imageAlt: "Campus Cash app mobile interface with a dashboard and budgeting tools",
     detailedImage: "/images/campuscash-poster.jpg",
@@ -62,7 +62,16 @@ export const projects: Project[] = [
         heading: "Research",
         body: [
           <>
-            We interviewed <strong>8 undergraduate students</strong> to understand how they manage their personal finances.
+            We interviewed <strong>8 undergraduate students</strong> to understand how they manage their personal finances. After analyzing the interview data through an <strong>affinity diagram</strong>, we identified two primary user needs and two major breakdowns in students' financial workflows.
+          </>,
+          <>
+            Students wanted <strong>clear, categorized expense tracking</strong> and <strong>customizable budgeting tools</strong> that could adapt to their individual spending habits. Many participants found existing banking apps too rigid, while manual tracking methods such as spreadsheets felt time-consuming and difficult to maintain.
+          </>,
+          <>
+            Our research also revealed two key pain points: <strong>inconsistent expense tracking</strong> and <strong>missed payments</strong>. Students often relied on rough mental estimates of their spending, making it difficult to know whether they were staying within budget. Because expenses fluctuated throughout the month, several participants reported forgetting payment deadlines or realizing too late that they had overspent, leading to late fees, financial stress, and increased dependence on savings.
+          </>,
+          <>
+            These insights established the foundation for CampusCash's core features: automated expense categorization, customizable budgets, and proactive payment and low-balance reminders.
           </>,
         ],
       },

@@ -1,11 +1,16 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 export default function CursorGlow() {
+  const pathname = usePathname();
   const glowRef = useRef<HTMLDivElement>(null);
+  const isWorkPage = pathname?.startsWith("/work/") ?? false;
 
   useEffect(() => {
+    if (isWorkPage) return;
+
     const glow = glowRef.current;
     if (!glow) return;
 
@@ -19,13 +24,14 @@ export default function CursorGlow() {
       mouseY = e.clientY;
     };
 
+    let frameId = 0;
     const animate = () => {
       currentX += (mouseX - currentX) * 0.12;
       currentY += (mouseY - currentY) * 0.12;
 
       glow.style.transform = `translate3d(${currentX - 250}px, ${currentY - 250}px, 0)`;
 
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
     };
 
     window.addEventListener("mousemove", handleMove);
@@ -33,8 +39,11 @@ export default function CursorGlow() {
 
     return () => {
       window.removeEventListener("mousemove", handleMove);
+      cancelAnimationFrame(frameId);
     };
-  }, []);
+  }, [isWorkPage]);
+
+  if (isWorkPage) return null;
 
   return <div ref={glowRef} className="cursor-glow" aria-hidden="true" />;
 }
