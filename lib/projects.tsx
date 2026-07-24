@@ -76,17 +76,28 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: "Ideation",
+        heading: "Ideation & Concept Development",
         body: [
-          "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
-          "Map and list views share one component system, so switching context never means relearning the layout.",
+          <>
+            Building on our user research, we used the <strong>IDEO brainstorming method</strong> to generate 80 possible ideas before narrowing them into eight storyboard concepts. Each storyboard explored a different way CampusCash could help students navigate everyday financial challenges, from managing subscriptions to understanding credit scores.
+          </>,
+          <>
+            To validate these concepts, we conducted <strong>speed dating sessions</strong> with students, presenting storyboard scenarios to gather reactions and understand which solutions felt most valuable in their daily lives. We analyzed the feedback using <strong>thematic analysis</strong>, identifying recurring patterns around spending visibility, proactive financial awareness, and the inconvenience of manual budgeting.
+          </>,
+          <>
+            The findings confirmed that students wanted financial tools that were simple, proactive, and easy to integrate into their routines. These insights directly shaped our final design, leading us to prioritize <strong>low-balance and bill reminders, a debt tracker with smart payment recommendations, and clear credit score guidance</strong> over more complex budgeting features.
+          </>,
         ],
       },
       {
         heading: "Design Process",
         body: [
-          "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
-          "Map and list views share one component system, so switching context never means relearning the layout.",
+          <>
+            A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.
+          </>,
+          <>
+            Map and list views share one component system, so switching context never means relearning the layout.
+          </>,
         ],
       },
       {
