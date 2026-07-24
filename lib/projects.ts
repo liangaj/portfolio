@@ -17,9 +17,10 @@ export type Project = {
   tools: string[]
   image: string
   imageAlt: string
+  detailedImage?: string
+  detailedImageAlt?: string
   overview: string
   sections: CaseStudySection[]
-  outcomes: { label: string; value: string }[]
 }
 
 export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
@@ -30,20 +31,22 @@ export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
 
 export const projects: Project[] = [
   {
-    slug: "nomad-travel-app",
-    title: "Nomad",
+    slug: "campus-cash",
+    title: "CampusCash",
     summary:
-      "A travel companion app that turns scattered trip plans into a single, calm itinerary.",
+      "A personal finance app designed for college students to manage their money and budget effectively.",
     category: "figma",
     categoryLabel: "Figma App Design",
-    year: "2025",
+    year: "2026",
     role: "Product & UX Design",
-    timeline: "6 weeks",
-    tools: ["Figma", "FigJam", "Maze"],
-    image: "/images/nomad-app.png",
-    imageAlt: "Nomad travel app mobile interface with a map and saved trip cards",
+    timeline: "3 months",
+    tools: ["Figma", "UX Research", "Interviews", "Prototyping"],
+    image: "/images/campuscash-app.jpg",
+    imageAlt: "Campus Cash app mobile interface with a dashboard and budgeting tools",
+    detailedImage: "/images/campuscash-poster.jpg",
+    detailedImageAlt: "Poster of view of Campus Cash app showing budgeting features and alerts",
     overview:
-      "Travelers juggle booking emails, screenshots, and group chats. Nomad consolidates everything into one adaptive itinerary that updates as plans change, so the next step is always one glance away.",
+      "Managing personal finances can feel overwhelming for students. CampusCash brings budgeting, low-balance alerts, and credit score guidance into one intuitive experience, making it easier to build healthier financial habits.",
     sections: [
       {
         heading: "The problem",
@@ -66,11 +69,6 @@ export const projects: Project[] = [
           "Map and list views share one component system, so switching context never means relearning the layout.",
         ],
       },
-    ],
-    outcomes: [
-      { label: "Task success", value: "92%" },
-      { label: "Time to next step", value: "-40%" },
-      { label: "Usability score", value: "4.6 / 5" },
     ],
   },
   {
@@ -110,11 +108,6 @@ export const projects: Project[] = [
         ],
       },
     ],
-    outcomes: [
-      { label: "Daily return rate", value: "+31%" },
-      { label: "Perceived clarity", value: "4.7 / 5" },
-      { label: "Screens designed", value: "14" },
-    ],
   },
   {
     slug: "finflow-onboarding-storyboard",
@@ -151,11 +144,6 @@ export const projects: Project[] = [
           "The storyboard revealed that anxiety peaked during identity verification. That insight led the team to add progress reassurance and plain-language explanations at exactly that step.",
         ],
       },
-    ],
-    outcomes: [
-      { label: "Frames", value: "6" },
-      { label: "Drop-off insight", value: "ID step" },
-      { label: "Team alignment", value: "Full buy-in" },
     ],
   },
   {
@@ -195,11 +183,6 @@ export const projects: Project[] = [
         ],
       },
     ],
-    outcomes: [
-      { label: "Participants", value: "8" },
-      { label: "Observations", value: "120+" },
-      { label: "Design principles", value: "5" },
-    ],
   },
   {
     slug: "transit-accessibility-audit",
@@ -236,11 +219,6 @@ export const projects: Project[] = [
           "I delivered a prioritized backlog of 27 issues. Fixing the top tier raised measured contrast compliance from 61% to 100% on core flows.",
         ],
       },
-    ],
-    outcomes: [
-      { label: "Issues found", value: "27" },
-      { label: "Contrast compliance", value: "61% → 100%" },
-      { label: "Screen-reader tests", value: "3" },
     ],
   },
 ]

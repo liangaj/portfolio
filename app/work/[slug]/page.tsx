@@ -96,11 +96,11 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div className="mx-auto max-w-5xl px-6 py-12">
               <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-secondary">
                 <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.imageAlt}
+                  src={project.detailedImage || "/placeholder.svg"}
+                  alt={project.detailedImageAlt!}
                   fill
                   sizes="(max-width: 1024px) 100vw, 1024px"
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -115,23 +115,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <p className="text-balance text-xl leading-relaxed md:text-2xl">
               {project.overview}
             </p>
-
-            {/* Outcomes */}
-            <dl className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {project.outcomes.map((outcome) => (
-                <div
-                  key={outcome.label}
-                  className="rounded-xl border border-border bg-card p-6"
-                >
-                  <dt className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                    {outcome.label}
-                  </dt>
-                  <dd className="mt-2 text-3xl font-semibold tracking-tight text-primary">
-                    {outcome.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
 
             {/* Sections */}
             <div className="mt-16 flex flex-col gap-12">

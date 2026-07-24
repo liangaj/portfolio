@@ -9,7 +9,7 @@ export function ResearchSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mb-12">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
-            02 — Research
+            02 — Case studies
           </p>
           <h2 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight md:text-4xl">
             Studies that start with people, not pixels

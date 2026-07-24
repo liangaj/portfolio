@@ -18,9 +18,7 @@ export function ContactSection() {
               Let&apos;s build something people love to use.
             </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
-              I&apos;m open to internships, freelance projects, and
-              collaborations. If you have a problem worth solving, I&apos;d love
-              to hear about it.
+              I&apos;m open to co-ops and full-time opportunities in UI/UX design and software engineering.
             </p>
             <a
               href="mailto:aliang1903@gmail.com"

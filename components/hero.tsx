@@ -52,7 +52,7 @@ export function Hero() {
 
         <dl className="mt-16 grid max-w-2xl grid-cols-2 gap-8 border-t border-border/60 pt-8 sm:grid-cols-4">
           {[
-            { value: "5+", label: "Case studies" },
+            { value: "3+", label: "Case studies" },
             { value: "20+", label: "Interviews run" },
             { value: "WCAG", label: "Accessibility-first" },
             { value: "3 yrs", label: "Design practice" },
