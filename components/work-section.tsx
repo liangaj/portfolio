@@ -13,7 +13,7 @@ export function WorkSection() {
               01 — Selected work
             </p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-              Figma app designs &amp; storyboards
+              Figma app prototypes &amp; storyboards
             </h2>
           </div>
           <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">

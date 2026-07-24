@@ -124,14 +124,23 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     {section.heading}
                   </h2>
                   <div className="mt-4 flex flex-col gap-4">
-                    {section.body.map((paragraph, i) => (
-                      <p
-                        key={i}
-                        className="text-pretty leading-relaxed text-muted-foreground"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
+                    {section.body.map((paragraph, i) =>
+                      typeof paragraph === "string" ? (
+                        <p
+                          key={i}
+                          className="text-pretty leading-relaxed text-muted-foreground"
+                        >
+                          {paragraph}
+                        </p>
+                      ) : (
+                        <div
+                          key={i}
+                          className="text-pretty leading-relaxed text-muted-foreground"
+                        >
+                          {paragraph}
+                        </div>
+                      )
+                    )}
                   </div>
                 </section>
               ))}

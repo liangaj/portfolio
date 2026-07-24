@@ -1,8 +1,10 @@
+import type { ReactNode } from "react"
+
 export type ProjectCategory = "figma" | "storyboard" | "research"
 
 export type CaseStudySection = {
   heading: string
-  body: string[]
+  body: ReactNode[]
 }
 
 export type Project = {
@@ -24,7 +26,7 @@ export type Project = {
 }
 
 export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
-  figma: "Figma App Design",
+  figma: "Figma App Prototype",
   storyboard: "Storyboard",
   research: "Research",
 }
@@ -36,7 +38,7 @@ export const projects: Project[] = [
     summary:
       "A personal finance app designed for college students to manage their money and budget effectively.",
     category: "figma",
-    categoryLabel: "Figma App Design",
+    categoryLabel: "Figma App Prototype",
     year: "2026",
     role: "Product & UX Design",
     timeline: "3 months",
@@ -49,21 +51,44 @@ export const projects: Project[] = [
       "Managing personal finances can feel overwhelming for students. CampusCash brings budgeting, low-balance alerts, and credit score guidance into one intuitive experience, making it easier to build healthier financial habits.",
     sections: [
       {
-        heading: "The problem",
+        heading: "Problem",
         body: [
-          "Through five interviews with frequent travelers, I found that plans lived in at least four places: email, notes apps, screenshots, and group chats. Nobody trusted a single source of truth.",
-          "The anxiety peaked in transit — people wanted the next step, a confirmation number, and a map, without digging.",
+          "For many college students, managing personal finances is an unfamiliar challenge. Without prior experience, they often rely on their parents for guidance on budgeting, spending, and financial decisions.", 
+
+          "CampusCash was designed to give students a trusted resource they can rely on independently, offering personalized budgeting tools, proactive alerts, and clear financial guidance to help them build confidence in managing their money.",
         ],
       },
       {
-        heading: "Approach",
+        heading: "Research",
         body: [
-          "I mapped the end-to-end journey from booking to arrival, then prioritized the moments of highest stress. A timeline-first information architecture emerged as the backbone of the app.",
-          "I prototyped a 'now / next' pattern that always surfaces the current and upcoming step, with everything else a tap away.",
+          <>
+            We interviewed <strong>8 undergraduate students</strong> to understand how they manage their personal finances.
+          </>,
         ],
       },
       {
-        heading: "Design decisions",
+        heading: "Ideation",
+        body: [
+          "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
+          "Map and list views share one component system, so switching context never means relearning the layout.",
+        ],
+      },
+      {
+        heading: "Design Process",
+        body: [
+          "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
+          "Map and list views share one component system, so switching context never means relearning the layout.",
+        ],
+      },
+      {
+        heading: "Prototype",
+        body: [
+          "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
+          "Map and list views share one component system, so switching context never means relearning the layout.",
+        ],
+      },
+      {
+        heading: "Usability Testing",
         body: [
           "A high-contrast dark theme keeps the interface readable in bright sunlight and dim planes alike. Trip cards use a consistent hierarchy: time, place, and a single primary action.",
           "Map and list views share one component system, so switching context never means relearning the layout.",
@@ -201,13 +226,13 @@ export const projects: Project[] = [
       "I evaluated a regional transit app against WCAG 2.2 and tested it with screen-reader users, producing a prioritized roadmap of fixes that made the core journey usable for everyone.",
     sections: [
       {
-        heading: "The problem",
+        heading: "Problem",
         body: [
           "The app's core task — planning a trip — was effectively unusable with a screen reader, and low-contrast labels failed even basic legibility checks.",
         ],
       },
       {
-        heading: "Method",
+        heading: "Research",
         body: [
           "I ran a heuristic audit against WCAG 2.2 AA, then moderated usability sessions with three screen-reader users to ground the findings in real experience.",
           "Every issue was logged with a severity rating, a WCAG reference, and a concrete recommendation.",
