@@ -67,6 +67,11 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 {project.summary}
               </p>
+              <button className="mt-6 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+                <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                  View prototype
+                </Link>
+              </button>
 
               <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">
                 <div>
@@ -123,24 +128,73 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <h2 className="text-2xl font-semibold tracking-tight">
                     {section.heading}
                   </h2>
-                  <div className="mt-4 flex flex-col gap-4">
-                    {section.body.map((paragraph, i) =>
-                      typeof paragraph === "string" ? (
-                        <p
-                          key={i}
-                          className="text-pretty leading-relaxed text-muted-foreground"
-                        >
-                          {paragraph}
-                        </p>
-                      ) : (
-                        <div
-                          key={i}
-                          className="text-pretty leading-relaxed text-muted-foreground"
-                        >
-                          {paragraph}
-                        </div>
-                      )
-                    )}
+                  <div className="mt-4 flex flex-col gap-6">
+                    {section.body.map((block, i) => {
+                      switch (block.type) {
+                        case "text":
+                          return (
+                            <div
+                              key={`${section.heading}-${i}`}
+                              className="text-pretty leading-relaxed text-muted-foreground"
+                            >
+                              {block.content}
+                            </div>
+                          )
+                        case "image":
+                          return (
+                            <figure
+                              key={`${section.heading}-${i}`}
+                              className="overflow-hidden rounded-xl border border-border bg-secondary/40"
+                            >
+                              <div className="relative aspect-[16/10]">
+                                <Image
+                                  src={block.src}
+                                  alt={block.alt}
+                                  fill
+                                  sizes="(max-width: 1024px) 100vw, 1024px"
+                                  className="object-contain"
+                                />
+                              </div>
+                              {block.caption ? (
+                                <figcaption className="border-t border-border/60 px-4 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                                  {block.caption}
+                                </figcaption>
+                              ) : null}
+                            </figure>
+                          )
+                        case "gallery":
+                          return (
+                            <div
+                              key={`${section.heading}-${i}`}
+                              className="grid gap-4 sm:grid-cols-2"
+                            >
+                              {block.images.map((image, imageIndex) => (
+                                <figure
+                                  key={`${section.heading}-${i}-${imageIndex}`}
+                                  className="overflow-hidden rounded-xl border border-border bg-secondary/40"
+                                >
+                                  <div className="relative aspect-[4/3]">
+                                    <Image
+                                      src={image.src}
+                                      alt={image.alt}
+                                      fill
+                                      sizes="(max-width: 768px) 100vw, 50vw"
+                                      className="object-contain"
+                                    />
+                                  </div>
+                                  {image.caption ? (
+                                    <figcaption className="border-t border-border/60 px-4 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                                      {image.caption}
+                                    </figcaption>
+                                  ) : null}
+                                </figure>
+                              ))}
+                            </div>
+                          )
+                        default:
+                          return null
+                      }
+                    })}
                   </div>
                 </section>
               ))}
