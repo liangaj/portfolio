@@ -156,7 +156,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                                 />
                               </div>
                               {block.caption ? (
-                                <figcaption className="border-t border-border/60 px-4 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                                <figcaption className="border-t border-border/60 px-4 py-3 text-center font-mono text-xs uppercase tracking-widest text-muted-foreground">
                                   {block.caption}
                                 </figcaption>
                               ) : null}
@@ -189,6 +189,42 @@ export default async function CaseStudyPage({ params }: PageProps) {
                                   ) : null}
                                 </figure>
                               ))}
+                            </div>
+                          )
+                        case "text-and-image":
+                          return (
+                            <div
+                              key={`${section.heading}-${i}`}
+                              className="flex flex-col gap-4 md:flex-row md:items-start"
+                            >
+                              <div className="flex flex-col gap-3 md:w-1/2">
+                                {block.content.map((item, itemIndex) => (
+                                  <div
+                                    key={`${section.heading}-${i}-${itemIndex}`}
+                                    className="text-pretty leading-relaxed text-muted-foreground"
+                                  >
+                                    {item}
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="md:w-1/2">
+                                <figure className="overflow-hidden rounded-xl">
+                                  <div className="relative aspect-[9/16]">
+                                    <Image
+                                      src={block.src}
+                                      alt={block.alt}
+                                      fill
+                                      sizes="(max-width: 1024px) 100vw, 50vw"
+                                      className="object-contain"
+                                    />
+                                  </div>
+                                  {block.caption ? (
+                                    <figcaption className="border-t border-border/60 px-4 py-3 text-center font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                                      {block.caption}
+                                    </figcaption>
+                                  ) : null}
+                                </figure>
+                              </div>
                             </div>
                           )
                         default:
