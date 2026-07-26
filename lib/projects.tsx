@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-export type ProjectCategory = "figma" | "storyboard" | "research"
+export type ProjectCategory = "figma" | "research"
 
 export type TextBlock = {
     type: "text"
@@ -22,6 +22,7 @@ export type GalleryBlock = {
 export type TextImageBlock = {
     type: "text-and-image"
     content: ReactNode[]
+    imageOnRight: boolean
     src: string
     alt: string
     caption?: string
@@ -55,7 +56,6 @@ export type Project = {
 
 export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
   figma: "Figma App Prototype",
-  storyboard: "Storyboard",
   research: "Research",
 }
 
@@ -90,7 +90,7 @@ export const projects: Project[] = [
         heading: "Research",
         body: [
           { type: "text", content: <>We interviewed <strong>8 undergraduate students at the University of Michigan</strong> to understand how they manage their personal finances. After analyzing the interview data through an <strong>affinity diagram</strong>, we identified two primary user needs and two major breakdowns in students' financial workflows.</> },
-          { type: "image", src: "/images/campuscash-ad-one.png", alt: "Affinity diagram showing user research insights about budgeting" },
+          { type: "image", src: "/images/campuscash-ad-one.png", alt: "Affinity diagram showing user research insights about budgeting", caption: "A section of the affinity diagram of the users' budgeting habits" },
           { type: "text", content: <>Students wanted <strong>clear, categorized expense tracking</strong> and <strong>customizable budgeting tools</strong> that could adapt to their individual spending habits. Many participants found existing banking apps too rigid, while manual tracking methods such as spreadsheets felt time-consuming and difficult to maintain.</> },
           { type: "text", content: <>Our research also revealed two key pain points: <strong>inconsistent expense tracking</strong> and <strong>missed payments</strong>. Students often relied on rough mental estimates of their spending, making it difficult to know whether they were staying within budget. Because expenses fluctuated throughout the month, several participants reported forgetting payment deadlines or realizing too late that they had overspent, leading to late fees, financial stress, and increased dependence on savings.</> },
           { type: "text", content: <>These insights established the foundation for CampusCash's core features: automated expense categorization, customizable budgets, and proactive payment and low-balance reminders.</> },
@@ -102,21 +102,48 @@ export const projects: Project[] = [
           { type: "text", content: <>Building on our user research, we used the <strong>IDEO brainstorming method</strong> to generate 80 possible ideas before narrowing them into eight storyboard concepts. Each storyboard explored a different way CampusCash could help students navigate everyday financial challenges, from managing subscriptions to understanding credit scores.</> },
           { type: "image", src: "/images/campuscash-storyboard-postits.jpg", alt: "Storyboard sketches showing four different concepts of CampusCash with post-it notes of idea feedback", caption: "Storyboard sketches with post-it notes of feedback from participants" },
           { type: "text", content: <>To validate these concepts, we conducted <strong>speed dating sessions</strong> with students, presenting storyboard scenarios to gather reactions and understand which solutions felt most valuable in their daily lives. We analyzed the feedback using <strong>thematic analysis</strong>, identifying recurring patterns around spending visibility, proactive financial awareness, and the inconvenience of manual budgeting.</> },
-          { type: "text", content: <>The findings confirmed that students wanted financial tools that were simple, proactive, and easy to integrate into their routines. These insights directly shaped our final design, leading us to prioritize <strong>low-balance and bill reminders, a debt tracker with smart payment recommendations, and clear credit score guidance</strong> over more complex budgeting features.</> },
+          { type: "text", content: <>The findings confirmed that students wanted financial tools that were simple, proactive, and easy to integrate into their routines. These insights directly shaped our final design, leading us to prioritize <strong>low-balance and bill reminders, transaction history sorted by categories, and clear credit score guidance</strong> over more complex budgeting features.</> },
         ],
       },
       {
         heading: "Design & Prototyping",
         body: [
+          { type: "text", content: <>Using our research findings as a foundation, we designed the CampusCash interface in <strong>Figma</strong>, beginning with user flows and wireframes before refining the experience into a high-fidelity interactive prototype. We prioritized a clean visual hierarchy, high-contrast colors, and consistent components to ensure financial information was easy to scan and accessible.</> },
+          { type: "text", content: <>While our initial designs used the University of Michigan's maize and blue palette, we later transitioned to orange accents to establish CampusCash as an independent product rather than an institutional app. The warmer palette maintained strong contrast while giving the app its own distinct identity.</> },
+          { type: "text", content: <>Our design decisions centered around the three features validated during our ideation process: <strong>low-balance and bill reminders, transaction history sorted by categories, and credit score guidance</strong>. We emphasized intuitive navigation and proactive notifications to help students stay informed about their finances without relying on manual tracking.</> },
           { type: "text-and-image", 
             content: [
-              <>Using our research findings as a foundation, we designed the CampusCash interface in <strong>Figma</strong>, beginning with user flows and wireframes before refining the experience into a high-fidelity interactive prototype. We prioritized a clean visual hierarchy, high-contrast colors, and consistent components to ensure financial information was easy to scan and accessible.</>,
-              <>While our initial designs used the University of Michigan's maize and blue palette, we later transitioned to orange accents to establish CampusCash as an independent product rather than an institutional app. The warmer palette maintained strong contrast while giving the app its own distinct identity.</>
+              <><strong>Making low balance alerts proactive</strong></>,
+              <>Many interview participants mentioned feeling caught off-guard by unexpected low balances because they were unaware of how much they were spending.</>,
+              <>We designed the Balance Alerts screen to help students stay ahead of their finances instead of being surprised by unexpected low balances.</>,
+              <>The interface combines customizable balance thresholds, flexible notification delivery options, and clear educational guidance, creating a proactive financial safety net that is easy to understand and manage.</>
             ],
+            imageOnRight: true,
             src: "/images/campuscash-balance-alerts.png",
-            alt: "CampusCash app's balance alerts page on Figma",
-            caption: "CampusCash app interface of the balance alerts feature" },
-          { type: "text", content: <>Our design decisions centered around the three features validated during our ideation process: <strong>low-balance and bill reminders, a debt tracker with smart recommendations, and credit score guidance</strong>. We emphasized intuitive navigation and proactive notifications to help students stay informed about their finances without relying on manual tracking.</> }
+            alt: "CampusCash app's balance alerts page on Figma" 
+          },
+          { type: "text-and-image", 
+            content: [
+              <><strong>Improving spending visibility</strong></>,
+              <>Our research showed that many studnets relied on rough mental estimates of their spending instead of actively tracking expenses. When they do, they found manual tools like Excel to be extremely time-consuming.</>,
+              <>To address this, we designed a transaction history that automatically categorizes expenses and visualizes monthly spending patterns.</>,
+              <>By combining searchable transaction history with simple filtering and visual summaries, this design helps students better understand their spending habits without the burden of manual tracking.</>
+            ],
+            imageOnRight: false,
+            src: "/images/campuscash-transactions.png",
+            alt: "CampusCash app's transaction history page on Figma"
+          },
+          { type: "text-and-image", 
+            content: [
+              <><strong>Building financial literacy while simplifying credit score management</strong></>,
+              <>Our research revealed that many students were unfamiliar with credit scores when they first began managing their own finances, and often relied on their praents for guidance.</>,
+              <>We designed the credit score dashboard to visualize score trends over time, highlight the factors affecting credit health, and provide educational articles with actionable guidance.</>,
+              <>By connecting financial data with clear explanations, the experience helps students build confidence and make credit scores less intimidating.</>
+            ],
+            imageOnRight: true,
+            src: "/images/campuscash-transactions.png",
+            alt: "CampusCash app's transaction history page on Figma"
+          },
         ],
       },
       {
@@ -127,6 +154,20 @@ export const projects: Project[] = [
           { type: "text", content: <>Based on these findings, we refined the prototype by adding clearer confirmation messages, improving navigation labels, making interactive components behave consistently, and surfacing recent transactions more prominently. At the same time, participants responded positively to the app's clean interface, credit score dashboard, and educational resources, validating our overall approach while highlighting opportunities to improve the user experience through iteration.</> },
         ],
       },
+      {
+        heading: "Learnings",
+        body: [
+          { type: "text", content: <>Throughout this project, I learned the importance of validating design decisions through continuous user feedback. While our research identified key student pain points, usability testing revealed that even small interaction details such as navigation labels, confirmation messages, and visual affordances, had a significant impact on users' confidence and ability to complete tasks.</> },
+          { type: "text", content: <>I also gained a deeper appreciation for iterative design. Watching users think aloud highlighted usability issues that were not apparent during prototyping, reinforcing that a polished interface alone does not guarantee a seamless experience. By iterating on the design based on real user feedback, I strengthened my ability to translate research insights into practical design improvements that better support users' needs.</> },
+        ]
+      },
+      {
+        heading: "Next Steps",
+        body: [
+          { type: "text", content: <>CampusCash successfully improves students' awareness of their spending through balance alerts, transaction tracking, and credit score insights, but there is still room for growth.</> },
+          { type: "text", content: <>Future iterations would focus on refining navigation, completing interactive features such as spending filters, and providing more personalized financial education through richer resources and recommendations. These improvements would help CampusCash evolve from a financial tracking tool into a more comprehensive platform that supports students' long-term financial confidence.</> },
+        ]
+      }
     ],
   },
 ]
@@ -136,5 +177,4 @@ export function getProject(slug: string): Project | undefined {
 }
 
 export const figmaProjects = projects.filter((p) => p.category === "figma")
-export const storyboardProjects = projects.filter((p) => p.category === "storyboard")
 export const researchProjects = projects.filter((p) => p.category === "research")

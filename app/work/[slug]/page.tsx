@@ -195,7 +195,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                           return (
                             <div
                               key={`${section.heading}-${i}`}
-                              className="flex flex-col gap-4 md:flex-row md:items-start"
+                              className={`flex flex-col gap-4 md:flex-row md:items-center ${block.imageOnRight ? "" : "md:flex-row-reverse"}`}
                             >
                               <div className="flex flex-col gap-3 md:w-1/2">
                                 {block.content.map((item, itemIndex) => (

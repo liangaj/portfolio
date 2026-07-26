@@ -1,8 +1,8 @@
 import { ProjectCard } from "@/components/project-card"
-import { figmaProjects, storyboardProjects } from "@/lib/projects"
+import { figmaProjects } from "@/lib/projects"
 
 export function WorkSection() {
-  const projects = [...figmaProjects, ...storyboardProjects]
+  const projects = [...figmaProjects]
 
   return (
     <section id="work" className="scroll-mt-16 border-b border-border/60">
