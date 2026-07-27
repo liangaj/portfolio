@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Amy Liang. Designed &amp; built with love.
+          © {new Date().getFullYear()} Amy Liang. Designed with love. Built with React, Next.js, and Tailwind CSS.
         </p>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
           <Link href="/#work" className="transition-colors hover:text-foreground">
