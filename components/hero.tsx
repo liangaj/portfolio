@@ -29,7 +29,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          I&apos;m Amy Liang, a Computer Science graduate with a minor in UX Design. 
+          I&apos;m Amy Liang, a Computer Science graduate from the University of Michigan with a minor in UX Design. 
           I combine user-centered design with software engineering to create accessible, 
           thoughtful digital products.
         </p>
