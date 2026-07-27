@@ -1,15 +1,22 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function CursorGlow() {
-  const pathname = usePathname();
+type CursorGlowProps = {
+  isEnabled?: boolean;
+};
+
+export default function CursorGlow({ isEnabled = true }: CursorGlowProps) {
   const glowRef = useRef<HTMLDivElement>(null);
-  const isWorkPage = pathname?.startsWith("/work/") ?? false;
+  const [opacity, setOpacity] = useState(0.7);
 
   useEffect(() => {
-    if (isWorkPage) return;
+    if (!isEnabled) {
+      setOpacity(0);
+      return;
+    }
+
+    setOpacity(0.7);
 
     const glow = glowRef.current;
     if (!glow) return;
@@ -41,9 +48,14 @@ export default function CursorGlow() {
       window.removeEventListener("mousemove", handleMove);
       cancelAnimationFrame(frameId);
     };
-  }, [isWorkPage]);
+  }, [isEnabled]);
 
-  if (isWorkPage) return null;
-
-  return <div ref={glowRef} className="cursor-glow" aria-hidden="true" />;
+  return (
+    <div
+      ref={glowRef}
+      className="cursor-glow"
+      aria-hidden="true"
+      style={{ opacity, transition: "opacity 2s ease-out" }}
+    />
+  );
 }

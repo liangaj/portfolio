@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import CursorGlow from "@/components/cursor-glow";
+import { LightSwitch } from "@/components/light-switch";
 
 const geistSans = Geist({
   subsets: ['latin'],
@@ -54,7 +54,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        <CursorGlow />
+        <div className="hidden md:block">
+          <LightSwitch />
+        </div>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

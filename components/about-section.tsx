@@ -20,23 +20,17 @@ export function AboutSection() {
             04 — About
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            A designer who thinks in systems and cares about people
+            Designing with empathy. {" "}
+            <span className="text-primary">Engineering with purpose.</span>
           </h2>
         </div>
 
         <div className="flex flex-col gap-6">
           <p className="text-pretty leading-relaxed text-muted-foreground">
-            I majored in computer science and minored in UX design because I
-            kept gravitating toward the same question: why is this so hard to
-            use? That curiosity turned into a practice built on research,
-            iteration, and a genuine respect for the people on the other side of
-            the screen — backed by the engineering skills to actually build it.
+            I studied computer science because I love building software, and UX design because I wanted to understand the people using it. That combination allows me to approach products from both perspectives—thinking about how they work, how they look, and how they make people feel.
           </p>
           <p className="text-pretty leading-relaxed text-muted-foreground">
-            My work spans the full arc of design — from field interviews and
-            storyboards that frame the problem, to polished, accessible Figma
-            prototypes that prove the solution. I care about clarity, evidence,
-            and interfaces that respect a person&apos;s time and attention.
+            I'm happiest when I can turn an idea into something real: researching user needs, designing intuitive interfaces, and writing the code that brings them to life. I believe great products are not only functional, but beautiful to look at and enjoyable to use.
           </p>
 
           <div>

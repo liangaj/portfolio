@@ -15,7 +15,7 @@ export function ContactSection() {
         <div className="grid gap-10 md:grid-cols-[1fr_1fr]">
           <div>
             <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
-              Let&apos;s build something people love to use.
+              Let&apos;s build something people love.
             </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
               I&apos;m open to co-ops and full-time opportunities in UI/UX design and software engineering.
