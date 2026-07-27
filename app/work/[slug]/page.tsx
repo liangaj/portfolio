@@ -67,11 +67,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 {project.summary}
               </p>
-              <button className="mt-6 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
-                <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                  View prototype
-                </Link>
-              </button>
+
+              {project.url ? (
+                <button className="mt-6 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+                  <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                    View prototype
+                  </Link>
+                </button>
+              ) : null}
 
               <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">
                 <div>

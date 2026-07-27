@@ -11,38 +11,13 @@ type EngineeringProject = {
 
 const engineeringProjects: EngineeringProject[] = [
   {
-    title: "Lattice",
+    title: "epiFoods",
     description:
-      "A real-time collaborative whiteboard with CRDT-based conflict resolution, WebSocket sync, and an offline-first local cache.",
-    stack: ["TypeScript", "Next.js", "WebSockets", "Yjs", "PostgreSQL"],
-    year: "2025",
+      "An iOS app that helps users with allergies and dietary restrictions find safe and delicious foods. Built with Swift, RESTful APIs, and Firebase.",
+    stack: ["Swift", "SwiftUI", "RESTful APIs", "Firebase", "MySQL"],
+    year: "2022",
     repo: "https://github.com",
     live: "https://example.com",
-  },
-  {
-    title: "quantize",
-    description:
-      "An open-source CLI that compresses and quantizes ML model weights, with a plugin system and reproducible benchmark suite.",
-    stack: ["Python", "PyTorch", "Click", "NumPy"],
-    year: "2024",
-    repo: "https://github.com",
-  },
-  {
-    title: "Beacon API",
-    description:
-      "A horizontally-scalable event ingestion service handling 10k req/s, with rate limiting, idempotency keys, and structured tracing.",
-    stack: ["Go", "gRPC", "Redis", "Docker", "Kubernetes"],
-    year: "2024",
-    repo: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "dotgrep",
-    description:
-      "A fuzzy config-file search tool written in Rust, indexing thousands of files in milliseconds with a ripgrep-style interface.",
-    stack: ["Rust", "Tokio", "Clap"],
-    year: "2023",
-    repo: "https://github.com",
   },
 ]
 

@@ -37,7 +37,7 @@ export type CaseStudySection = {
 
 export type Project = {
   slug: string
-  url: string
+  url?: string
   title: string
   summary: string
   category: ProjectCategory
@@ -60,7 +60,7 @@ export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
 }
 
 export const projects: Project[] = [
-  {
+  { // CAMPUS CASH
     slug: "campus-cash",
     url: "https://www.figma.com/design/XKJWgtV5YBU9mQg2kt9Mx1/493-Prototype?node-id=8-2&t=xzzhiNM1JJVRviB4-1",
     title: "CampusCash",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Product & UX Design",
     timeline: "Jan. 2026 — Apr. 2026",
-    tools: ["Figma", "UX Research", "Interviews", "Affinity Diagrams", "Prototyping"],
+    tools: ["Figma", "UX Research", "User Interviews", "Affinity Diagram", "Thematic Analysis", "Prototyping", "Usability Testing", "Design Iteration"],
     image: "/images/campuscash-app.jpg",
     imageAlt: "Campus Cash app mobile interface with a dashboard and budgeting tools",
     detailedImage: "/images/campuscash-poster.jpg",
@@ -168,6 +168,103 @@ export const projects: Project[] = [
           { type: "text", content: <>Future iterations would focus on refining navigation, completing interactive features such as spending filters, and providing more personalized financial education through richer resources and recommendations. These improvements would help CampusCash evolve from a financial tracking tool into a more comprehensive platform that supports students' long-term financial confidence.</> },
         ]
       }
+    ],
+  },
+  { // CHICAGOSAFE
+    slug: "chicagosafe",
+    title: "ChicaGoSafe",
+    summary:
+      "A web application designed to help travelers navigate Chicago safely by providing real-time safety information and resources.",
+    category: "figma",
+    categoryLabel: "Figma",
+    year: "2025",
+    role: "UI Design & UX Research",
+    timeline: "Sep. 2025 — Dec. 2025",
+    tools: ["User Interviews", ],
+    image: "",
+    imageAlt: "",
+    overview:
+      "",
+    sections: [
+      {
+        heading: "Problem",
+        body: [
+          { type: "text", content: <></> },
+        ],
+      },
+    ],
+  },
+  { // ECC APP
+    slug: "ecc-app",
+    title: "ECC App",
+    summary:
+      "A mobile application designed to help students manage their finances and build financial literacy.",
+    category: "figma",
+    categoryLabel: "Figma",
+    year: "2025",
+    role: "UX Research",
+    timeline: "Feb. 2025 — May. 2025",
+    tools: ["User Interviews", ],
+    image: "",
+    imageAlt: "",
+    overview:
+      "",
+    sections: [
+      {
+        heading: "Problem",
+        body: [
+          { type: "text", content: <></> },
+        ],
+      },
+    ],
+  },
+/* ------------- RESEARCH SECTION ------------ */
+  {
+    slug: "student-engagement-with-local-government",
+    title: "Student Engagement with Local Government",
+    summary:
+      "A research study exploring how students interact with and perceive local government services.",
+    category: "research",
+    categoryLabel: "Research",
+    year: "2026",
+    role: "UX Research",
+    timeline: "Mar. 2026 — May. 2026",
+    tools: ["User Interviews", ],
+    image: "",
+    imageAlt: "",
+    overview:
+      "",
+    sections: [
+      {
+        heading: "Research Goals",
+        body: [
+          { type: "text", content: <></> },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "keyboard-research",
+    title: "Keyboard Research",
+    summary:
+      "A research study exploring the ergonomic and cognitive effects of different keyboard layouts on typing performance.",
+    category: "research",
+    categoryLabel: "Research",
+    year: "2025",
+    role: "UX Research",
+    timeline: "Jan. 2025 — May. 2025",
+    tools: ["User Interviews", ],
+    image: "",
+    imageAlt: "",
+    overview:
+      "",
+    sections: [
+      {
+        heading: "Research Goals",
+        body: [
+          { type: "text", content: <></> },
+        ],
+      },
     ],
   },
 ]

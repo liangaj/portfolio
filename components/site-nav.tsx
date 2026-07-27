@@ -41,10 +41,10 @@ export function SiteNav() {
         </ul>
 
         <Link
-          href="/#contact"
+          href="/resume"
           className="hidden rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-block"
         >
-          Get in touch
+          Resume
         </Link>
 
         <button

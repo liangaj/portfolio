@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 const socials = [
   { label: "Email", value: "aliang1903@gmail.com", href: "mailto:aliang1903@gmail.com" },
@@ -21,11 +21,10 @@ export function ContactSection() {
               I&apos;m open to co-ops and full-time opportunities in UI/UX design and software engineering.
             </p>
             <a
-              href="mailto:aliang1903@gmail.com"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              href="/resume"
+              className="mt-8 inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
-              <Mail className="h-4 w-4" />
-              aliang1903@gmail.com
+              Resume
             </a>
           </div>
 
