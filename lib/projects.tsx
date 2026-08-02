@@ -76,7 +76,7 @@ export const projects: Project[] = [
     ],
     title: "ECC App",
     summary:
-      "A mobile application designed to help students manage their finances and build financial literacy.",
+      "A mobile app designed to connect students, resources, and opportunities within the Everyone Can Code Chicago program.",
     category: "figma",
     categoryLabel: "Figma",
     year: "2025",
