@@ -30,6 +30,11 @@ export type TextImageBlock = {
 
 export type ContentBlock = TextBlock | ImageBlock | GalleryBlock | TextImageBlock
 
+export type linkButtons = {
+  label: string
+  href: string
+}
+
 export type CaseStudySection = {
   heading: string
   body: ContentBlock[]
@@ -37,7 +42,7 @@ export type CaseStudySection = {
 
 export type Project = {
   slug: string
-  url?: string
+  url?: linkButtons[]
   title: string
   summary: string
   category: ProjectCategory
@@ -60,9 +65,119 @@ export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
 }
 
 export const projects: Project[] = [
-  { // CAMPUS CASH
+  /* ------------- ECC APP ------------ */
+  { 
+    slug: "ecc-app",
+    url: [
+      {
+        label: "View Presentation",
+        href: "https://docs.google.com/presentation/d/1I3pPSal1loCFPrj-UkGPmzuIW2He0kbW4s4etzqd0Gk/edit?usp=sharing"
+      }
+    ],
+    title: "ECC App",
+    summary:
+      "A mobile application designed to help students manage their finances and build financial literacy.",
+    category: "figma",
+    categoryLabel: "Figma",
+    year: "2025",
+    role: "Mobile App Developer",
+    timeline: "Jun. 2025 — Aug. 2025",
+    tools: ["Figma", "Google Slides", "User Research", "Stakeholder Communication", "Personas", "Sitemap", "Wireframing", "User Flows", "High-Fidelity Prototyping", "Iterative Design"],
+    image: "/images/ecc-app.png",
+    imageAlt: "ECC App mobile interface displaying information about the showcase event",
+    detailedImage: "/images/ecc-title-slide.svg",
+    detailedImageAlt: "Title slide for the ECC App presentation",
+    overview:
+      "Despite teaching student interns how to build iOS applications each summer, Everyone Can Code Chicago had no app of its own. During my time as a mobile app developer, my team of three transformed a broad vision into a user-centered mobile platform that connected students, resources, and opportunities.",
+    sections: [
+      {
+        heading: "The Challenge",
+        body: [
+          { type: "text", content: <>Although ECC equips students with technical skills, the lack of a dedicated platform meant that students had no centralized platform to access resources.</> },
+          { type: "text", content: <>The experience once the internship ends is also scarce. Students often struggle to maintain connections with their peers and mentors after the internship concludes. These issues persisted across multiple cohorts, indicating opportunities for a more unified student experience.</> },
+        ],
+      },
+      {
+        heading: "Research",
+        body: [
+          { type: "text", content: <><strong>Understanding student pain points</strong></> },
+          { type: "text", content: <>All three team members were program alumni, so we began by reflecting on our own experiences before validating them through discussions with students and the program director.</> },
+          { type: "text", content: <>Across different cohorts from different years, four consistent themes emerged:</> },
+          { type: "text", content: <>
+            <ol className="list-decimal pl-10 space-y-2">
+                <li>Scattered & hard-to-find resources</li>
+                <li>Weak community beyond individual teams</li>
+                <li>Lack of guidance post program completion</li>
+                <li>Lack of visibility into summer opportunities and events</li>
+            </ol>
+            </> },
+          { type: "text", content: <>These insights became the foundation for our design decisions.</> },
+          { type: "image", src: "/images/ecc-persona.svg", alt: "Persona showing student needs and pain points", caption: "A current ECC student looking for resources and networking opportunities." },
+        ],
+      },
+      {
+        heading: "Defining the Solution",
+        body: [
+          { type: "text", content: <>We worked closely with the program leader—the primary stakeholder—throughout the project. During weekly check-ins, we presented our research findings, discussed feature ideas, and gathered feedback to ensure our design aligned with both student needs and the program's long-term goals.</> },
+          { type: "text", content: <>These conversations helped us refine our priorities and narrow the app's scope to four core features that addressed the most common pain points identified during research:</> },
+          { type: "text", content: <>
+            <ul className="list-disc pl-10 space-y-2">
+              <li><strong>Centralized Resources</strong> - A single hub for recordings, documentations, and ECC-wide annoucements</li>
+              <li><strong>Community</strong> - Student, alumni, and mentor profiles to foster networking across ECC</li>
+              <li><strong>Opportunity Discovery</strong> - A dedicated space for internships, workshops, and other events around the city</li>
+              <li><strong>Project Showcase</strong> - A gallery of past projects to inspire future cohorts and highlight alumni work</li>
+            </ul>
+          </> },
+          { type: "text", content: <>By continuously incorporating stakeholder feedback alongside user research, we <strong>refined the app into a focused MVP that addressed the most pressing student needs</strong>. Features such as gamification and a forum page were deferred to future iterations, allowing us to deliver a clear, achievable product vision in the short amount of time we have while leaving space for future enhancements.</> },
+        ],
+      },
+      {
+        heading: "Information Architecture",
+        body: [
+          { type: "text", content: <>With the core features defined, we created a sitemap to visualize the app's structure. I designed the application's information architecture to organize content into clear, intuitive user journeys.</> },
+          { type: "text", content: <>The navigation focused on four primary destinations:</> },
+          { type: "text", content: <>
+            <ul className="list-disc pl-10 space-y-2">
+              <li>Home</li>
+              <li>Cohort</li>
+              <li>Events</li>
+              <li>Profile</li>
+            </ul>
+          </> },
+          { type: "text", content: <>Supporting pages included authentication, private messaging, and resource libraries to minimize navigation complexity while keeping important information easily accessible.</> },
+          { type: "image", src: "/images/ecc-sitemap.png", alt: "A snippet of our sitemap showing the structure of the ECC App's Home, Profile, and Events page", caption: "A snippet of our sitemap showing the structure of the ECC App's Home, Profile, and Events page" },
+        ],
+      },
+      {
+        heading: "Design & Prototyping",
+        body: [
+          { type: "text", content: <>With the application's structure established, I shifted my focus to transforming the sitemap into a cohesive mobile experience. We wanted the app to feel like a natural extension of the ECC brand, so we maintained the visual identify of the program's website. Inspired by Apple's Swift branding, we carried over the site's vibrant orange accents, clean layouts, and minimalist aesthetic.</> },
+          { type: "text", content: <>I began by creating low-fidelity wireframes to quickly explore screen layouts, content hierarchy, and user flows before investing in visual design. These wireframes served as a foundation for our weekly stakeholder meetings, allowing us to validate our design decisions early and iterate efficiently based on feedback, ensuring a smooth final product.</> },
+          { type: "image", src: "/images/ecc-wireframe.png", alt: "Wireframe of the ECC App's Home page showing navigation and key features", caption: "Early wireframe of the ECC App's Home page used to explore layouts and content hierarchy before moving into visual design" },
+          { type: "text", content: <>After refining the layouts, we developed a high-fidelity interactive prototype in Figma. To ensure consistency across the application, I established reusable UI components, standardized typography, and a cohesive color palette that aligned with the ECC website.</> },
+          { type: "text", content: <><strong>Explore the interactive prototype below:</strong></> },
+          { type: "text", content: <><iframe width="800" height="450" src="https://embed.figma.com/proto/eczx5RDhNlrHt1l7ttbeUz/ECC-App-Dev?node-id=228-3581&scaling=scale-down&content-scaling=fixed&page-id=3%3A502&starting-point-node-id=228%3A3581&show-proto-sidebar=1&embed-host=share" allowFullScreen></iframe></> },
+        ],
+      },
+      {
+        heading: "Presenting the Final Design",
+        body: [
+          { type: "text", content: <>The ECC App MVP was successfully delivered with a presentation to Apple executives, the ECC program leader, and other program alumni, where we introduced the research behind our design decisions and demonstrated the interactive prototype.</> },
+          { type: "text", content: <>To create a cohesive experience, I desgined the presentation deck using the same visual language as the ECC aesthetic, incorportating a minimalist black-and-orange color palette, clean layouts, and modern typography to reinforce the project's identity.</> },
+          { type: "text", content: <>The presentation sparked valuable discussions about the app's future, with stakeholders providing feedback that helped shape a roadmap for future iterations beyond our initial MVP.</> },
+        ],
+      }
+    ],
+  },
+  /* ------------- CAMPUSCASH ------------ */
+  { 
     slug: "campus-cash",
-    url: "https://www.figma.com/design/XKJWgtV5YBU9mQg2kt9Mx1/493-Prototype?node-id=8-2&t=xzzhiNM1JJVRviB4-1",
+    url: [
+      {
+        label: "View Figma Prototype",
+        href: "https://www.figma.com/design/XKJWgtV5YBU9mQg2kt9Mx1/493-Prototype?node-id=8-2&t=xzzhiNM1JJVRviB4-1"
+      },
+    ],
     title: "CampusCash",
     summary:
       "A personal finance app designed for college students to manage their money and budget effectively.",
@@ -183,30 +298,8 @@ export const projects: Project[] = [
     tools: ["User Interviews", ],
     image: "",
     imageAlt: "",
-    overview:
-      "",
-    sections: [
-      {
-        heading: "Problem",
-        body: [
-          { type: "text", content: <></> },
-        ],
-      },
-    ],
-  },
-  { // ECC APP
-    slug: "ecc-app",
-    title: "ECC App",
-    summary:
-      "A mobile application designed to help students manage their finances and build financial literacy.",
-    category: "figma",
-    categoryLabel: "Figma",
-    year: "2025",
-    role: "UX Research",
-    timeline: "Feb. 2025 — May. 2025",
-    tools: ["User Interviews", ],
-    image: "",
-    imageAlt: "",
+    detailedImage: "",
+    detailedImageAlt: "",
     overview:
       "",
     sections: [
@@ -232,6 +325,8 @@ export const projects: Project[] = [
     tools: ["User Interviews", ],
     image: "",
     imageAlt: "",
+    detailedImage: "",
+    detailedImageAlt: "",
     overview:
       "",
     sections: [
@@ -256,6 +351,8 @@ export const projects: Project[] = [
     tools: ["User Interviews", ],
     image: "",
     imageAlt: "",
+    detailedImage: "",
+    detailedImageAlt: "",
     overview:
       "",
     sections: [
