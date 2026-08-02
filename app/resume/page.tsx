@@ -7,12 +7,12 @@ const resumes = [
   {
     title: "UI/UX Resume",
     description: "Design-focused resume highlighting UX research, product thinking, and interface design work.",
-    href: "/resume/amy-liang-uiux-resume.pdf",
+    href: "/resume/Resume_Jiayu_Liang_UIUX.pdf",
   },
   {
     title: "SWE Resume",
     description: "Engineering-focused resume covering software development, systems thinking, and technical projects.",
-    href: "/resume/amy-liang-swe-resume.pdf",
+    href: "/resume/Resume_Jiayu_Liang.pdf",
   },
 ]
 
@@ -38,7 +38,7 @@ export default function ResumePage() {
               Choose a resume to download
             </h1>
             <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-              Pick the version that best fits the role you’re reviewing.
+              Pick the version you're interested in. Two resumes, tailored for different roles.
             </p>
 
             <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -46,7 +46,8 @@ export default function ResumePage() {
                 <a
                   key={resume.title}
                   href={resume.href}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-xl border border-border bg-secondary/40 p-6 transition-colors hover:border-primary hover:bg-secondary"
                 >
                   <div className="flex items-start justify-between gap-4">

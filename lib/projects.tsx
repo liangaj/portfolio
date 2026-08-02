@@ -78,7 +78,7 @@ export const projects: Project[] = [
     summary:
       "A mobile app designed to connect students, resources, and opportunities within the Everyone Can Code Chicago program.",
     category: "figma",
-    categoryLabel: "Figma",
+    categoryLabel: "Figma App Prototype",
     year: "2025",
     role: "Mobile App Developer",
     timeline: "Jun. 2025 — Aug. 2025",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     detailedImage: "/images/campuscash-poster.jpg",
     detailedImageAlt: "Poster of view of Campus Cash app showing budgeting features and alerts",
     overview:
-      "Managing personal finances can feel overwhelming for students. CampusCash brings budgeting, low-balance alerts, and credit score guidance into one intuitive experience, making it easier to build healthier financial habits.",
+      "CampusCash is a mobile budgeting application that helps college students build healthier financial habits through budgeting tools, low-balance alerts, and credit score guidance. As part of a four-person UI development team, I conducted user research, developed personas and user flows, created wireframes and a high-fidelity Figma prototype, and refined the overall user experience through iterative design.",
     sections: [
       {
         heading: "Problem",
@@ -285,28 +285,31 @@ export const projects: Project[] = [
       }
     ],
   },
-  { // CHICAGOSAFE
+  /* ------------- CHICAGOSAFE ------------ */
+  {
     slug: "chicagosafe",
     title: "ChicaGoSafe",
     summary:
-      "A web application designed to help travelers navigate Chicago safely by providing real-time safety information and resources.",
+      "A web application designed to help travelers navigate Chicago safely by providing crowd-sourced safety information and resources.",
     category: "figma",
-    categoryLabel: "Figma",
+    categoryLabel: "Full-Stack Web Application",
     year: "2025",
-    role: "UI Design & UX Research",
+    role: "UI Design & Development, UX Research, Project Manager",
     timeline: "Sep. 2025 — Dec. 2025",
-    tools: ["User Interviews", ],
-    image: "",
-    imageAlt: "",
-    detailedImage: "",
-    detailedImageAlt: "",
+    tools: ["Figma", "Jira", "v0", "Competitive Analysis","Wireframing", "AI Prototyping", "Iterative Design"],
+    image: "/images/chicagosafe-app.png",
+    imageAlt: "Desktop interface of ChicaGoSafe showing a map of Chicago separated by neighborhood with safety information and resources",
+    detailedImage: "/images/chicagosafe-neighborhood.svg",
+    detailedImageAlt: "Desktop interface of ChicaGoSafe showing a map of Chicago with Chinatown as the chosen neighborhood, displaying a description, highlights, and reviews.",
     overview:
-      "",
+      "ChicaGoSafe is a web application that helps tourists navigate Chicago with confidence through an interactive map featuring neighborhood safety scores, ratings, and nearby attractions. As part of a four-person Human-Centered Software Engineering team, I conducted user research, refined the UI/UX produced by v0 in Figma, and managed the project using Jira.",
     sections: [
       {
         heading: "Problem",
         body: [
-          { type: "text", content: <></> },
+          { type: "text", content: <>When brainstorming project ideas, I wanted to solve a problem that felt both personal and meaningful. Having grown up in Chicago, I had seen firsthand how the city's reputation often overshadowed its diverse neighborhoods and attractions. Friends planning to visit would frequently ask if Chicago was safe, assuming the entire city was dangerous based on stories they had heard.</> },
+          { type: "text", content: <>In reality, safety varies significantly across different parts of the city. Tourists often rely on scattered sources such as travel blogs, crime reports, or social media to understand where to go, making it difficult to build an accurate picture of the famous Windy City.</> },
+          { type: "text", content: <>We identified an opportunity to create a centralized platform that helps visitors make informed travel decisions by presenting neighborhood safety information in a clear, approachable, and down-to-ground way.</> },
         ],
       },
     ],
@@ -333,7 +336,7 @@ export const projects: Project[] = [
       {
         heading: "Research Goals",
         body: [
-          { type: "text", content: <></> },
+          { type: "text", content: <>The primary goal of this research was to understand how students interact with and perceive local government services. We aimed to identify pain points in the current system and explore opportunities for improvement.</> },
         ],
       },
     ],

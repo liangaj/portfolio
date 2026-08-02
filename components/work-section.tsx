@@ -13,12 +13,11 @@ export function WorkSection() {
               01 — Selected work
             </p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-              Figma app prototypes &amp; storyboards
+              Products &amp; UX Case Studies
             </h2>
           </div>
           <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
-            End-to-end product work, from framing the problem with storyboards
-            to shipping high-fidelity, accessible interfaces.
+            End-to-end product work, from user research and problem framing to shipping interactive prototypes and full-stack applications.
           </p>
         </div>
 
