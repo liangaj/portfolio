@@ -307,11 +307,66 @@ export const projects: Project[] = [
       {
         heading: "Problem",
         body: [
-          { type: "text", content: <>When brainstorming project ideas, I wanted to solve a problem that felt both personal and meaningful. Having grown up in Chicago, I had seen firsthand how the city's reputation often overshadowed its diverse neighborhoods and attractions. Friends planning to visit would frequently ask if Chicago was safe, assuming the entire city was dangerous based on stories they had heard.</> },
+          { type: "text", content: <>When brainstorming project ideas, I wanted to solve a problem that felt both personal and meaningful. Having grown up in Chicago, I had experienced how the city's reputation often overshadowed its diverse neighborhoods and attractions. Friends planning to visit would frequently ask if Chicago was safe, assuming the entire city was dangerous based on stories they had heard.</> },
           { type: "text", content: <>In reality, safety varies significantly across different parts of the city. Tourists often rely on scattered sources such as travel blogs, crime reports, or social media to understand where to go, making it difficult to build an accurate picture of the famous Windy City.</> },
           { type: "text", content: <>We identified an opportunity to create a centralized platform that helps visitors make informed travel decisions by presenting neighborhood safety information in a clear, approachable, and down-to-ground way.</> },
         ],
       },
+      {
+        heading: "Research",
+        body: [
+          { type: "text", content: <>Before designing the interface, we sought to understand both the needs of Chicago tourists and the current landscape of travel applications. Since the project centered on helping tourists navigate the city safely, I conducted background research on Chicago tourism, analyzed existing travel platforms, and identified opportunities where our product could provide unique value.</> },
+          { type: "text", content: <>I performed a competitive analysis of Google Maps, Citymapper, and TripIt, evaluating their navigation, trip planning, accessibility, and safety features. While these platforms excelled at directions and itinerary management, none combined neighborhood safety information with local recommendations in a single, free experience. This revealed an opportunity to create a tool tailored specifically for visitors exploring Chicago.</> },
+          { type: "text", content: <>
+            <div className="flex flex-wrap gap-3">
+              <a href="/files/chicagosafe-research-memo.pdf" target="_blank" rel="noopener noreferrer" className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">View Full Research Memo</a>
+            </div>
+          </> },
+          { type: "image", src: "/images/chicagosafe-table-one.png", alt: "Competitive analysis of Google Maps, Citymapper, and TripIt showing their strengths and weaknesses in navigation, trip planning, accessibility, and safety features", caption: "Competitive analysis of Google Maps, Citymapper, and TripIt" },
+          { type: "text", content: <>My research also informed several key product decisions. I recommended integrating Google Maps with publicly available crime data from the Chicago Police Department's ClearMap, visualizing neighborhoods through intuitive color-coded safety scores, and designing a responsive interface optimized for travelers using the application on the go.</> },
+        ],
+      },
+      {
+        heading: "Project Planning & Management",
+        body: [
+          { type: "text", content: <>With the project's direction established, we organized development using an agile workflow to ensure the application could be completed within our semester timeline. Working as part of a four-person team, we translated research findings into project milestones, defined feature requirements, and divided responsibilities across the team.</> },
+          { type: "text", content: <>I managed our project using <strong>Jira</strong>, creating milestones and sprint tasks to track progress throughout development. I also developed a Gantt chart to visualize the project timeline, coordinate dependencies, and keep the team aligned on upcoming deliverables.</> },
+          { type: "image", src: "/images/chicagosafe-gantt-chart.png", alt: "Gantt chart showing the project timeline and milestones for ChicaGoSafe", caption: "Gantt chart made in Jira showing the project timeline and milestones for ChicaGoSafe" },
+          { type: "text", content: <>This planning process allowed us to balance design, implementation, testing, and documentation while ensuring that high-priority features were completed on schedule.</> },
+        ],
+      },
+      {
+        heading: "Design & Prototyping",
+        body: [
+          { type: "text", content: <>After defining the project's requirements and development roadmap, we translated our ideas into a low-fidelity prototype using <strong>v0</strong>. Rapid prototyping allowed us to quickly explore layouts, user flows, and interactions before investing significant development effort.</> },
+          { type: "text", content: <>Once the overall structure was established, I <strong>refined the interface in Figma</strong>, improving visual hierarchy, spacing, typography, and consistency across the application while ensuring the design remained responsive across desktop and mobile experiences.</> },
+          { type: "image", src: "/images/chicagosafe-mobile-wireframes.png", alt: "Figma prototype of ChicaGoSafe's map, filters, and attractions views", caption: "Figma prototype of ChicaGoSafe's interactive map, filters, and attractions views." },
+          { type: "text", content: <>Our design centered around four core experiences identified during research: an interactive neighborhood map, detailed neighborhood profiles, crowdsourced reviews & ratings, and a filtering tools that allow users to quickly discover attractions, emergency services, and safer areas throughout Chicago.</> },
+        ],
+      },
+      {
+        heading: "Development",
+        body: [
+          { type: "text", content: <>With the interface finalized, we implemented ChicaGoSafe using <strong>React</strong> for the frontend and <strong>Python/Flask</strong> for the backend with a <strong>PostgreSQL</strong> database.</> },
+          { type: "text", content: <>The application features an interactive map centered on Chicago neighborhoods, color-coded safety ratings, neighborhood detail pages, user-submitted reviews, filtering tools, and responsive layouts optimized for both desktop and mobile devices. Throughout development, we continuously validated functionality against our project requirements while integrating public safety information and mapping services into a cohesive user experience.</> },
+          { type: "text", content: <>Accessibility remained a priority during implementation. We regularly evaluated the application using WAVE to identify WCAG 2.1 AA issues, addressing color contrast, alternative text, form labels, and other accessibility concerns as features were developed. This iterative approach allowed usability and accessibility improvements to happen alongside implementation rather than being postponed until the end of the project.</> },
+        ],
+      },
+      {
+        heading: "Usability Testing & Iteration",
+        body: [
+          { type: "text", content: <>To evaluate the project's direction, we conducted three peer review sessions to evaluate the application's concept, usability, and feature set. Reviewers validated the need for a centralized platform that combines neighborhood safety information with community recommendations while providing valuable suggestions for improvement.</> },
+          { type: "text", content: <>One recurring question centered around <strong>community participation</strong>. Since user reviews and recommendations were a core part of the experience, reviewers challenged us to consider how we would encourage local residents to actively contribute content and keep the platform valuable over time. This prompted discussions around long-term user engagement and reinforced the importance of designing features that benefit both tourists and local contributors.</> },
+          { type: "text", content: <>Reviewers also encouraged us to further differentiate ChicaGoSafe from existing crime maps. Rather than simply displaying raw crime statistics, they emphasized presenting safety information in a way that was easier for visitors to understand. In response, we transitioned the neighborhood safety ratings to be based on neighborhood friendliness to tourists instead of pure crime statistics, eliminating the quantitative bias caused by over/under-policed areas.</> },
+        ],
+      },
+      {
+        heading: "Learnings",
+        body: [
+          { type: "text", content: <>This project taught me the importance of user-centered design and the value of iterative development. By continuously gathering feedback and refining our approach, we were able to create a product that effectively addressed the needs of our target users.</> },
+          { type: "text", content: <>I also gained experience in full-stack development, learning how to integrate frontend and backend systems to create a seamless user experience.</> },
+        ],
+      }
     ],
   },
 /* ------------- RESEARCH SECTION ------------ */
