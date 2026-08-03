@@ -361,10 +361,34 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: "Learnings",
+        heading: "Final Product",
         body: [
-          { type: "text", content: <>This project taught me the importance of user-centered design and the value of iterative development. By continuously gathering feedback and refining our approach, we were able to create a product that effectively addressed the needs of our target users.</> },
-          { type: "text", content: <>I also gained experience in full-stack development, learning how to integrate frontend and backend systems to create a seamless user experience.</> },
+          { type: "text", content: <>After several rounds of testing and refinement, our team delivered <strong>ChicaGoSafe</strong>, <strong>a fully functional full-stack web application</strong> that helps tourists navigate Chicago more confidently by combining neighborhood safety information with community recommendations.</> },
+          { type: "text", content: <>The final application enables users to:</> },
+          { type: "text", content: <>
+            <ul className="list-disc pl-10 space-y-2">
+              <li>Explore an interactive map of Chicago neighborhoods with color-coded safety ratings</li>
+              <li>Access detailed neighborhood profiles with safety information, attractions, and reviews</li>
+              <li>Submit and read user-generated reviews and ratings for neighborhoods and attractions</li>
+              <li>Filter neighborhoods based on safety, attractions, and other criteria to plan visits effectively</li>
+              <li>Access the application across desktop and mobile devices</li>
+            </ul>
+          </> },
+          { type: "text", content: <>
+            <div className="aspect-video w-full overflow-hidden rounded-xl">
+              <iframe src="https://www.youtube.com/embed/BVBUMd-yPOg?si=hXQ7T39o-NdoMh2e&amp;start=29" title="YouTube video player" className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
+            </> },
+            { type: "text", content: <>ChicaGoSafe demonstrates how a user-centered approach, throughful planning, and iterative development can transform complex challenges into approachable, user-friendly solutions.</> },
+        ],
+      },
+      {
+        heading: "Reflections",
+        body: [
+          { type: "text", content: <>Building ChicaGoSafe was a valuable learning experience that reinforced the importance of early planning and user-centered design. Conducting research, defining project requirements, and gathering feedback throughout the development process were crucial for creating a product that effectively addressed the needs of our target users, rather than replying on assumptions.</> },
+          { type: "text", content: <>Working across every stage of the project, from initial research and project planning to UI design and development, also enhanced my understanding of the entire development lifecycle and strengthened my ability to collaborate within a multi-disciplinary team.</> },
+          { type: "text", content: <>I gained experience balancing user needs with technical constraints, prioritizing features for an MVP, and iterating based on feedback while keeping the project on schedule with a managable scope.</> },
+          { type: "text", content: <>If I were to continue the project, I would explore integrating live crime data, emergency alerts, and personalized route recommendations. ChicaGoSafe also needs stronger incentives for community contributions to create a richer, more engaging user experience for both tourists and local residents.</> },
         ],
       }
     ],
