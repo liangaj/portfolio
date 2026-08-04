@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Amy Liang — UX Designer',
+  title: 'Amy Liang — UI/UX & SWE',
   description:
-    'UX design portfolio of Amy Liang. Research projects, storyboards, and Figma app designs crafted with a systems mindset.',
+    'UI/UX portfolio of Amy Liang. Selected work and case studies in product design, user research, and front-end development.',
   generator: 'v0.app',
   icons: {
     icon: [
